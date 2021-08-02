@@ -1,0 +1,6 @@
+[submodule "components/generic_embedded_libs"]
+	path = components/generic_embedded_libs
+	url = https://github.com/Maldus512/generic_embedded_libs
+[submodule "components/liblightmodbus"]
+	path = components/liblightmodbus
+	url = https://github.com/Jacajack/liblightmodbus.git
