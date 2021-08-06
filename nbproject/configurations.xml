@@ -13,11 +13,17 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="main" displayName="main" projectFiles="true">
+        <logicalFolder name="config" displayName="config" projectFiles="true">
+          <logicalFolder name="mbconf" displayName="mbconf" projectFiles="true">
+          </logicalFolder>
+          <itemPath>main/config/libconf.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="peripherals" displayName="peripherals" projectFiles="true">
           <itemPath>main/peripherals/uart.h</itemPath>
           <itemPath>main/peripherals/system.h</itemPath>
           <itemPath>main/peripherals/hardwareprofile.h</itemPath>
           <itemPath>main/peripherals/digout.h</itemPath>
+          <itemPath>main/peripherals/dipswitch.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -30,6 +36,10 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="components" projectFiles="true">
         <logicalFolder name="f1" displayName="gel" projectFiles="true">
+          <logicalFolder name="debounce" displayName="debounce" projectFiles="true">
+            <itemPath>components/generic_embedded_libs/gel/debounce/pulsecounter.c</itemPath>
+            <itemPath>components/generic_embedded_libs/gel/debounce/debounce.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="timer" displayName="timer" projectFiles="true">
             <itemPath>components/generic_embedded_libs/gel/timer/stopwatch.c</itemPath>
           </logicalFolder>
@@ -73,6 +83,7 @@
           <itemPath>main/peripherals/system.c</itemPath>
           <itemPath>main/peripherals/digout.c</itemPath>
           <itemPath>main/peripherals/timer.c</itemPath>
+          <itemPath>main/peripherals/dipswitch.c</itemPath>
         </logicalFolder>
         <itemPath>main/main.c</itemPath>
       </logicalFolder>
@@ -87,6 +98,7 @@
     <Elem>main</Elem>
     <Elem>components/generic_embedded_libs/gel/timer</Elem>
     <Elem>components/liblightmodbus</Elem>
+    <Elem>components/generic_embedded_libs/gel/debounce</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

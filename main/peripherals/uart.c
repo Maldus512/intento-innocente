@@ -108,8 +108,9 @@ int uart_sync_write(uint8_t *data, int len) {
 
 
 int uart_read_rx_buffer(uint8_t *buffer) {
-    memcpy(buffer, uart_rx_buffer, index_rx);
-    return index_rx;
+    int received = index_rx;
+    memcpy(buffer, uart_rx_buffer, received);
+    return received;
 }
 
 
@@ -135,13 +136,15 @@ int uart_async_write(uint8_t *data, int len) {
      return len;
 }
 
+
 void __attribute((interrupt, no_auto_psv)) _U1ErrInterrupt(void)
 {
     // In caso di errore lo ignoriamo soltanto
     IFS4bits.U1ERIF = 0;
 
-    if (U1STAbits.OERR)
+    if (U1STAbits.OERR) {
         U1STAbits.OERR = 0;
+    }
 }
 
 
@@ -150,7 +153,7 @@ void __attribute((interrupt, no_auto_psv)) _U1ErrInterrupt(void)
 /*----------------------------------------------------------------------------*/
 void __attribute__((interrupt, no_auto_psv)) _U1RXInterrupt(void)
 {
-    if (is_expired(ts, get_millis(), 200)) {
+    if (is_expired(ts, get_millis(), 50)) {
         index_rx=0;
         ts=0;
     }
@@ -160,7 +163,6 @@ void __attribute__((interrupt, no_auto_psv)) _U1RXInterrupt(void)
     }
     
     IFS0bits.U1RXIF = 0;
-   
 }
 
 

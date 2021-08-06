@@ -16,6 +16,7 @@
                 <sourceRootElem>main</sourceRootElem>
                 <sourceRootElem>components/generic_embedded_libs/gel/timer</sourceRootElem>
                 <sourceRootElem>components/liblightmodbus</sourceRootElem>
+                <sourceRootElem>components/generic_embedded_libs/gel/debounce</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
