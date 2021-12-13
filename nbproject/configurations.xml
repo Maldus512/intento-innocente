@@ -24,6 +24,7 @@
           <itemPath>main/peripherals/hardwareprofile.h</itemPath>
           <itemPath>main/peripherals/digout.h</itemPath>
           <itemPath>main/peripherals/dipswitch.h</itemPath>
+          <itemPath>main/peripherals/digin.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -84,6 +85,7 @@
           <itemPath>main/peripherals/digout.c</itemPath>
           <itemPath>main/peripherals/timer.c</itemPath>
           <itemPath>main/peripherals/dipswitch.c</itemPath>
+          <itemPath>main/peripherals/digin.c</itemPath>
         </logicalFolder>
         <itemPath>main/main.c</itemPath>
       </logicalFolder>
@@ -313,6 +315,7 @@
         <property key="UART 1" value="true"/>
         <property key="UART 2" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="false"/>
@@ -385,6 +388,7 @@
         <property key="UART 1" value="true"/>
         <property key="UART 2" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="false"/>
