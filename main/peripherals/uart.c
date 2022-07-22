@@ -21,8 +21,8 @@ volatile static int  f_tx_on  = 0;
 volatile static int  len_tx   = 0;
 volatile static int  index_tx = 0;
 
-static uint8_t       uart_rx_buffer[UART_BUFFER_RX];
-volatile static int  index_rx = 0;
+uint8_t       uart_rx_buffer[UART_BUFFER_RX];
+volatile int  index_rx = 0;
 static unsigned long ts=0;
 
 #define BAUDRATE    115200
@@ -100,8 +100,8 @@ int uart_sync_write(uint8_t *data, int len) {
             U1TXREG = data[i++];
     }
     while (!U1STAbits.TRMT);
+    __delay_us(50);
     DERE_LAT = 0;
-    __delay_us(10);
     IEC0bits.U1TXIE = 1;
     return len;
 }

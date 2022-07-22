@@ -46,7 +46,7 @@ int main(void) {
                 uart_sync_write(minion.response.frame, minion.response.length);
 
                 for (i = 0; i < NUM_RELE; i++) {
-                    digout_update_rele(i, (coils[i/8] & (1 << (i % 8))) > 0);
+                    //digout_update_rele(i, (coils[i/8] & (1 << (i % 8))) > 0);
                 }
             }
        }
@@ -54,6 +54,11 @@ int main(void) {
        if (is_expired(timestamp, get_millis(), 10)) {
            if (digin_take_reading() > 0) {
                serialize_uint16_le(discrete, (uint16_t)digin_get_inputs());
+           }
+           
+           size_t i = 0;
+           for (i = 0; i < 12; i++) {
+               digout_update_rele(i, digin_get(i));
            }
            timestamp = get_millis();
        }
