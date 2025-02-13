@@ -9,4 +9,4 @@ void system_init(void);
 #include <libpic30.h>
 #include <xc.h>
 
-#endif
+#endif  /*  SYSTEM_H_INCLUDED */

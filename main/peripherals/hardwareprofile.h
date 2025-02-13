@@ -8,6 +8,7 @@
 #define TRIS_OUTPUT 0
 
 
+
 #define RELE1_LAT LATCbits.LATC2
 #define RELE1_TRIS TRISCbits.TRISC2 
 #define RELE2_LAT LATCbits.LATC1
@@ -23,7 +24,8 @@
 #define RELE7_LAT LATBbits.LATB0
 #define RELE7_TRIS TRISBbits.TRISB0 
 #define RELE8_LAT LATAbits.LATA1
-#define RELE8_TRIS TRISAbits.TRISA1 
+#define RELE8_TRIS TRISAbits.TRISA1
+
 #define RELE9_LAT LATAbits.LATA0
 #define RELE9_TRIS TRISAbits.TRISA0
 #define RELE10_LAT LATAbits.LATA12
@@ -42,10 +44,12 @@
 #define RELE16_TRIS TRISBbits.TRISB12
 
 
+
 #define DERE_LAT LATBbits.LATB6
 #define DERE_TRIS TRISBbits.TRISB6
 #define RX_TRIS TRISBbits.TRISB8
 #define TX_TRIS TRISBbits.TRISB7
+
 
 
 #define DIPSWITCH1_PORT (!PORTCbits.RC5)
@@ -53,8 +57,7 @@
 #define DIPSWITCH2_PORT (!PORTCbits.RC4)
 #define DIPSWITCH2_TRIS TRISCbits.TRISC4
 
-
-#define INPUT1_PORT PORTBbits.RB9
+#define INPUT1_PORT PORTBbits.RB9       // Connettore IN1
 #define INPUT1_TRIS TRISBbits.TRISB9
 #define INPUT2_PORT PORTCbits.RC6
 #define INPUT2_TRIS TRISCbits.TRISC6
@@ -66,7 +69,8 @@
 #define INPUT5_TRIS TRISCbits.TRISC9
 #define INPUT6_PORT PORTAbits.RA11
 #define INPUT6_TRIS TRISAbits.TRISA11
-#define INPUT7_PORT PORTAbits.RA8
+
+#define INPUT7_PORT PORTAbits.RA8       // Connettore IN2
 #define INPUT7_TRIS TRISAbits.TRISA8
 #define INPUT8_PORT PORTAbits.RA3
 #define INPUT8_TRIS TRISAbits.TRISA3
@@ -79,5 +83,4 @@
 #define INPUT12_PORT PORTBbits.RB4
 #define INPUT12_TRIS TRISBbits.TRISB4
 
-
-#endif
+#endif /* HARDWAREPROFILE_H_INCLUDED */
